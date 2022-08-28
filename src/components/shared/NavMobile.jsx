@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { useMediaQuery } from 'react-haiku'
 import Logo from '../../assets/logo/logo.svg'
 
 export default function NavMobile() {
@@ -21,9 +20,8 @@ export default function NavMobile() {
 
 	useEffect(() => {
 		handleMenuScrollLock()
+		// eslint-disable-next-line
 	}, [isActive])
-
-	const breakpoint = useMediaQuery('(max-width:1024px)')
 
 	return (
 		<>

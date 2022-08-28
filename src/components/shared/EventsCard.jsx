@@ -66,12 +66,13 @@ export default function EventsCard({
 							<a
 								href={`https://www.google.com/maps/search/?api=1&query=${eventLocation.latitude}, ${eventLocation.longitude}`}
 								target='_blank'
+								rel='noreferrer'
 							>
 								<i className='fa-solid fa-location-dot'></i>
 							</a>
 						</div>
 						<div className='card-event-link'>
-							<a href={`${eventLink}`} target='_blank'>
+							<a href={`${eventLink}`} target='_blank' rel='noreferrer'>
 								<i className='fa-solid fa-link'></i>
 							</a>
 						</div>
