@@ -44,16 +44,6 @@ export default function Contact() {
 											placeholder='Type your message here...'
 										></textarea>
 									</div>
-									<div className='form-input contact' hidden>
-										<label htmlFor='bot-field' hidden>
-											Don't fill out if human:
-										</label>
-										<input
-											name='bot-field'
-											hidden
-											placeholder='Type your message here...'
-										></input>
-									</div>
 									<div className='form-input contact'>
 										<label htmlFor='submit'></label>
 										<input name='submit' type='submit' value='Send' />

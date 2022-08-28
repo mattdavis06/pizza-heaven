@@ -779,10 +779,6 @@ a.btn,
 	margin-bottom: 1rem;
 }
 
-.review-rating i.no-star {
-	color: var(--grey-link-bg);
-}
-
 .reviewer-details small {
 	margin: 0 0.25rem;
 	font-size: 1.15rem;

@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper'
-
+import ReviewRatingStar from './shared/ReviewRatingStar'
 import 'swiper/css'
 
 export default function Reviews() {
@@ -29,7 +29,7 @@ export default function Reviews() {
 			id: 3,
 			review:
 				'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum pariatur explicabo temporibus, quidem doloribus, dolor ipsam laborum error placeat minus fugit provident nihil soluta officiis sed quisquam, aliquam odio eligendi.',
-			reviewRating: 3,
+			reviewRating: 4,
 			reviewerName: 'Lucy',
 			reviewerLocation: 'Bamber Bridge',
 			reviewedDate: '01/07/2022',
@@ -47,77 +47,10 @@ export default function Reviews() {
 		},
 	]
 
-	const displayReviewStars = (reviewRating) => {
-		switch (reviewRating) {
-			case 0:
-				return (
-					<>
-						<i className='fa-solid fa-star no-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-					</>
-				)
-				break
-			case 1:
-				return (
-					<>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-					</>
-				)
-				break
-			case 2:
-				return (
-					<>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-					</>
-				)
-				break
-			case 3:
-				return (
-					<>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-					</>
-				)
-				break
-			case 4:
-				return (
-					<>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star no-star'></i>
-					</>
-				)
-				break
-			case 5:
-				return (
-					<>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star'></i>
-						<i className='fa-solid fa-star'></i>
-					</>
-				)
-				break
-			default:
-				break
-		}
+	const reviewRatings = (review) => {
+		return [...Array(review.reviewRating)].map((review, idx) => (
+			<ReviewRatingStar key={idx} />
+		))
 	}
 
 	return (
@@ -148,7 +81,7 @@ export default function Reviews() {
 											<h4>{review.review}</h4>
 											<i className='fa-solid fa-quote-right'></i>
 											<div className='review-rating'>
-												{displayReviewStars(review.reviewRating)}
+												{reviewRatings(review)}
 											</div>
 											<div className='reviewer-details'>
 												<small className='reviewer-name'>

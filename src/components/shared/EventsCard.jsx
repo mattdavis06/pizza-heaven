@@ -25,8 +25,14 @@ export default function EventsCard({
 							Date:
 							<span>
 								{eventDate !== null
-									? eventDate
-									: `${eventStartDate} - ${eventEndDate}`}
+									? eventDate.split('-').reverse().join('-')
+									: `${eventStartDate
+											.split('-')
+											.reverse()
+											.join('-')} - ${eventEndDate
+											.split('-')
+											.reverse()
+											.join('-')}`}
 							</span>
 						</h6>
 						<h6>
