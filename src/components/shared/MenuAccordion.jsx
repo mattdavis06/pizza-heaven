@@ -60,7 +60,7 @@ export default function MenuAccordion({ heading, headingIcon }) {
 			>
 				<h5>{heading}</h5>
 				<div className='card-header-icons'>
-					<i className={`fas fa-chevron-${isOpen ? 'down' : 'up'}`}></i>
+					<i className={`fas fa-chevron-${isOpen ? 'up' : 'down'}`}></i>
 					{headingIcon === null ? (
 						<i className='fa-solid fa-carrot'></i>
 					) : (

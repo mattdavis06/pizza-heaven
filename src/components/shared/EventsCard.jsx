@@ -53,7 +53,7 @@ export default function EventsCard({
 					onClick={() => setIsOpen(!isOpen)}
 				>
 					<h6>Event Details:</h6>
-					<i className={`fas fa-chevron-${isOpen ? 'down' : 'up'}`}></i>
+					<i className={`fas fa-chevron-${isOpen ? 'up' : 'down'}`}></i>
 				</div>
 				<div className={`card-event-content ${isOpen ? 'open' : ''}`}>
 					<div
